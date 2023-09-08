@@ -1,6 +1,7 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import Gotit from "../components/Gotit";
 import Age from "../components/Age.jsx";
+import Input from "../components/Input.jsx";
 import Counter from "../components/Counter.jsx";
 const botName = "ExcitementBot";
 
@@ -19,12 +20,19 @@ const config = {
     chatButton: {
       backgroundColor: "#5ccc9d",
     },
+    userInput: {
+      backgroundColor: "red",
+    },
   },
 
   widgets: [
     {
       widgetName: "gotit",
       widgetFunc: (props) => <Gotit {...props} />,
+    },
+    {
+      widgetName: "input",
+      widgetFunc: (props) => <Input {...props} />,
     },
     {
       widgetName: "age",

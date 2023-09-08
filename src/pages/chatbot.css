@@ -1,0 +1,9 @@
+
+.react-chatbot-kit-chat-input-container{
+    display: none;
+}
+
+.react-chatbot-kit-chat-message-container{
+    overflow-x:hidden;
+    overflow-y: scroll;
+}

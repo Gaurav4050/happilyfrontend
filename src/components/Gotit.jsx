@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 const Gotit = (props) => {
   const [buttonBackground, setButtonBackground] = useState("#5ccc9d");
-
+  const [open, setOpen] = useState(true);
   const handleGotitClick = () => {
+    setOpen(false);
     props.actionProvider.handleGotit();
   };
 
@@ -27,15 +28,19 @@ const Gotit = (props) => {
 
   return (
     <div>
-      <button
-        className="got-it-button"
-        style={buttonStyle}
-        onClick={handleGotitClick}
-        onMouseEnter={handleHover}
-        onMouseLeave={handleLeave}
-      >
-        Got it!
-      </button>
+      {open && (
+        <>
+          <button
+            className="got-it-button"
+            style={buttonStyle}
+            onClick={handleGotitClick}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleLeave}
+          >
+            Got it!
+          </button>
+        </>
+      )}
     </div>
   );
 };

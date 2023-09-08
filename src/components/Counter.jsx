@@ -18,18 +18,27 @@ function Counter() {
 
   const countdownStyle = {
     textAlign: "center",
-    fontSize: "20px",
+    fontSize: "15px",
     color: "white",
     backgroundColor: "#4CAF50", // Green background color
-    padding: "5px",
-    borderRadius: "10px",
+    padding: "5px 50px",
     boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Box shadow for a raised effect
     animation: "fadeIn 1s ease-in-out", // Fade-in animation
+    position: "absolute",
+    left: 0,
+    bottom: 0,
   };
 
   return (
     <div>
-      <p style={countdownStyle}>{count}</p>
+      <p style={countdownStyle}>
+        {" "}
+        Redirecting to the dashboard in{" "}
+        <span style={{ color: "#284666", fontWeight: 600 }}>
+          {" "}
+          {count} seconds
+        </span>
+      </p>
     </div>
   );
 }

@@ -8,10 +8,10 @@ class MessageParser {
     message = message.toLowerCase();
     console.log(message);
 
-    if (message.trim() !== "") {
-      localStorage.setItem("name", message);
-      return this.actionProvider.handleAgeAction();
-    }
+    // if (message.trim() !== "") {
+    //   // localStorage.setItem("name", message);
+    //   return this.actionProvider.handleAgeAction();
+    // }
   }
 }
 

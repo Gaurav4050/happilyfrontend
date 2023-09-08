@@ -10,12 +10,17 @@ class ActionProvider {
 
     this.addMessageToState(message);
 
-    const msg = this.createChatBotMessage("Enter your name");
+    const msg = this.createChatBotMessage("Enter your name", {
+      widget: "input",
+    });
 
     this.addMessageToState(msg);
   };
 
-  handleAgeAction = () => {
+  handleAgeAction = (selectedName) => {
+    const message = this.createClientMessage(`${selectedName}`);
+    this.addMessageToState(message);
+
     const msg = this.createChatBotMessage("Enter your Age", {
       widget: "age",
     });
